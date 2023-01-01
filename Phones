@@ -1,0 +1,90 @@
+import java.util.Scanner;
+class Apple12{
+    static void Launch(){
+        System.out.println("Launch Announced: 2020, October 13");
+        System.out.println("Launch Status: Available. Released 2020, October 23");
+    }
+    static void body(){
+        System.out.println("Body Dimensions: 146.7 x 71.5 x 7.4 mm (5.78 x 2.81 x 0.29 in)");
+        System.out.println("Body Build: Glass front (Corning-made glass), glass back (Corning-made glass)");
+        System.out.println("Body SIM: Single SIM (Nano-SIM and/or eSIM) or Dual SIM (Nano-SIM, dual stand-by) - for China\n" +
+                " \tIP68 dust/water resistant (up to 6m for 30 mins)\n" +
+                "Apple Pay (Visa, MasterCard, AMEX certified)");
+    }
+    static void display(){
+        System.out.println("Display Type: Super Retina XDR OLED, HDR10, Dolby Vision");
+        System.out.println("Display Size: 6.1 inches, 90.2 cm2 (~86.0% screen-to-body ratio)");
+        System.out.println("Display Resolution: 1170 x 2532 pixels, 19.5:9 ratio (~460 ppi density)");
+        System.out.println("Display Protection: Ceramic Shield glass");
+    }
+    static void platform(){
+        System.out.println("Platform OS: iOS 14.1, upgradable to iOS 16.0.2");
+        System.out.println("Platform Chipset: Apple A14 Bionic (5 nm)");
+        System.out.println("Platform CPU: Hexa-core (2x3.1 GHz Firestorm + 4x1.8 GHz Icestorm)");
+        System.out.println("Platform GPU: Apple GPU (4-core graphics)");
+    }
+    static void selfiecam(){
+        System.out.println("Selfie camera single: 12 MP, f/2.2, 23mm (wide), 1/3.6\n"+
+                "SL 3D, (depth/biometrics sensor)");
+        System.out.println("Selfie camera video: 4K@24/30/60fps, 1080p@30/60/120fps, gyro-EIS");
+        System.out.println("Selfie camera features: HDR");
+    }
+}
+class Apple12pro extends Apple12{
+    String weight, memory,model, displayt;
+    public Apple12pro(){
+     weight ="189 gram";
+     memory="128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM";
+     model="A2407, A2341, A2406, A2408, iPhone13,3";
+     displayt="800 nits (HBM), 1200 nits (peak)";
+    }
+    public String getw(){
+        return weight;
+    }
+    public String getm(){
+        return memory;
+    }
+    public String getmo(){
+        return model;
+    }
+    public String getd(){
+        return displayt;
+    }
+}
+
+
+public class Phones {
+         static int p;
+    public static void main(String[] args) {
+        System.out.println("****Welcome**** ");
+        System.out.println("We provide information related to these phones:");
+        System.out.println("Press 1 for Apple Iphone!");
+        System.out.println("Press 2 for Apple 12 PRO");
+        System.out.println("Enter:");
+        Scanner n=new Scanner(System.in);
+        p=n.nextInt();
+        Apple12 obj=new Apple12();
+        Apple12pro obj1=new Apple12pro();
+         if(p==1)
+            {
+
+                obj.Launch();
+                obj.body();
+                obj.display();
+                obj.platform();
+                obj.selfiecam();
+            }
+            else {
+                obj1.Launch();
+                obj1.body();
+                obj1.display();
+                obj1.platform();
+                obj1.selfiecam();
+                System.out.println("Apple 12PRO weight: " + obj1.getw());
+                System.out.println("Apple 12 PRO memory: " + obj1.getm());
+                System.out.println("Apple 12 PRO model: " + obj1.getmo());
+             System.out.println("Apple 12 PRO Display type: "+obj1.getd());
+            }
+        }
+    }
+
